@@ -1,7 +1,18 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+* {
+font-family: 'Noto Sans TC';
+ }
+
+
+
 /*body不被蓋住*/
 .body{
+
     padding-top: 80px;
 }
+
+
+
 
 i{
     visibility:hidden;
