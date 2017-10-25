@@ -9,6 +9,7 @@ font-family: 'Noto Sans TC';
 .body{
 
     padding-top: 80px;
+
 }
 
 
@@ -278,13 +279,29 @@ img {
     .navbar-toggle {
         display: block;
     }
-    .navbar-collapse {
-        padding-right: 0px;
-        padding-left: 0px;
-        border-top: 1px solid transparent;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
 
+    /*無法捲動BUG*/
+    .navbar-collapse {
+       padding-right: 0px;
+       padding-left: 0px;
+       overflow-x: visible;
+       -webkit-overflow-scrolling: touch;
+       border-top: 1px solid transparent;
+       box-shadow: inset 0 1px 0 rgba(0, 153, 67, 0.15);
     }
+
+    .navbar-collapse.collapse {
+    overflow-x:visible;
+    overflow-y:auto;
+    z-index: 1;
+    }
+    /*漢堡選單超出BUG*/
+    .navbar-collapse.in {
+    overflow-y: auto;
+    }
+
+    
+
     .navbar-fixed-top {
         top: 0;
         border-width: 0 0 1px;
@@ -319,7 +336,7 @@ img {
     max-width: 280px;
     }
     .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse{
-    max-height: 500px;
+    max-height: 400px;
     }
 
     .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
@@ -327,9 +344,9 @@ img {
     background-color: rgba(255,255,255,0);
     }
 
-i{
+    i{
     visibility:visible;
-}
+    }
 
     /*內部選單*/
     .dropdown-menu>li>a {
@@ -727,9 +744,100 @@ color:#333333;
     letter-spacing: 1.2pt;
     line-height: 1.5;
  }
+}
+@media (max-width: 340px){
 
+.service-icon {
+    width: 65px;
+    height: 75px;
+    overflow: hidden;
+    margin-right: 0px;
+    margin-top:0px;
+    position:relative;
+    left:0%;
+    float: left;
+    -webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -ms-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
 }
 
+.service-icon>.img-responsive{    
+    display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.service-box {
+    margin: 0px auto;
+    display: inline-block;
+    padding-top: 0px;
+    position: relative;
+    left: 0%;
+    width: 100%;
+}
+
+.service-box1 {
+    margin: 0px auto;
+    display: inline-block;
+    padding-top: 0px;
+}
+
+.service-box .service-text {
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+}
+.service-box .service-text h3 {
+    padding: 0 0 0 0;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+    color: #333333;
+    -webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -ms-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+
+.service-box .service-text p
+{
+font-size: 15px;
+text-align: justify;
+letter-spacing: 1pt;
+line-height: 1.5;
+}
+
+
+.service-box1 .about-text {
+    width: 100%;
+    float: left;
+}
+
+.service-box1 .about-text p
+{
+font-size: 16px;
+text-align: justify;
+letter-spacing: 1pt;
+line-height: 1.5;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 4;
+overflow: hidden;
+}
+
+.about-text>h3{    
+color:#333333; 
+    font-size:24px ;
+    font-weight:600; 
+    margin-top: 10px;
+    margin-bottom: 5px;
+    letter-spacing: 1.2pt;
+    line-height: 1.5;
+ }
+
+
+}
 /*間格*/
 .section-padding
 {
@@ -985,6 +1093,21 @@ footer { background-color:#ffffff; min-height:350px; border-top: 1px solid #e5e5
     visibility:visible;
 }
 
+@media (max-width: 992px){
+.footer-ul li p {
+    color: #949292;
+    word-spacing: 10px;
+    margin: 0px;
+}
+}
+@media (max-width: 360px){
+.footer-ul li p {
+    color: #949292;
+    word-spacing: 80px;
+    margin: 0px;
+}
+}
+
 
 .full-screen {
   background-size: cover;
@@ -1231,9 +1354,7 @@ text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
 
 }
 
-
-
-@media (max-width: 992px) and (min-width: 581px){
+@media (max-width: 992px) and (min-width: 599px){
 .news-caption {
   position: absolute;
   top: 5%;
@@ -1353,25 +1474,233 @@ text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
 
      }
      
-.footer-ul li p {
-    color: #949292;
-    word-spacing: 10px;
-    margin: 0px;
+}
+
+@media (max-width: 715px) and (min-width: 599px){
+.news-caption {
+  position: absolute;
+  top: 5%;
+  left: 11%;
+  z-index: 10;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 40px;
+  color: #fff;
+  text-align:left; 
+}
+
+.news-btn {
+  position: absolute;
+  top: 5%;
+  left: 6%;
+  z-index: 10;
+  color: #fff;
+  text-align:left; 
+}
+
+.item h1 
+{
+font-size: 28px;
+text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+}
+
+.item h4 
+{
+font-size: 15px;
+font-weight: 300;
+letter-spacing: 1pt;
+text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+}
+
+.news-caption p
+{
+font-size: 14px;
+padding-top:10px;
+letter-spacing: 0pt;
+font-weight: 300;
+line-height: 1.5;
+text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 3;
+overflow: hidden;
+}    
+
+.newsbtn1{
+    position: relative;
+    background-color: white;
+    width: 47%;
+    display: inline-block;
+    padding: 8px 5px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1pt;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+}
+
+.newsbtn2{
+    position: relative;
+    background-color:white;
+    width: 96%;
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 8px 8px;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 1pt;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+}
+
+
+.owl-theme .owl-nav [class*='owl-prev']
+  {
+  position: absolute;
+    width: 40px;
+    height: 40px;
+    left:-1%;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,1);
+    border: 1px solid rgba(170, 170, 170, 0.66);
+    transition: background-color 0.5s;
+    top: 35%;
+     }
+
+  .owl-theme .owl-nav [class*='owl-next']
+  {
+  position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 35%;
+    right:-1%;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,1);
+    border: 1px solid rgba(170, 170, 170, 0.66);
+    transition: background-color 0.5s;
+
+     }
+     
+}
+
+@media (max-width: 599px) {
+
+.news-caption {
+  position: absolute;
+  top: 25%;
+  left: 11%;
+  z-index: 10;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 40px;
+  color: #fff;
+  text-align:left; 
+}
+
+.news-btn {
+  position: absolute;
+  top: 25%;
+  left: 11%;
+  z-index: 10;
+  color: #fff;
+  text-align:left; 
+  width: 80%;
+}
+
+.item h1 
+{
+font-size: 36px;
+text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+}
+
+.item h4 
+{
+font-size: 20px;
+font-weight: 300;
+letter-spacing: 1.2pt;
+text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+}
+
+.news-caption p
+{
+font-size: 16px;
+padding-top:10px;
+letter-spacing: 0pt;
+font-weight: 300;
+line-height: 1.5;
+text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+}    
+.newsbtn1{
+    position: relative;
+    background-color: white;
+    width: 49%;
+    display: inline-block;
+    padding: 4% 4%;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1pt;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+}
+
+.newsbtn2{
+    position: relative;
+    background-color:white;
+    width: 99%;
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 4% 4%;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1pt;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
 }
 }
 
 
 /*最新消息icon*/
-
-.icon_img
-{
-    width: 30px;
-    height: 30px;
-
-
+.icon_img{
+    position: absolute;
+    width: 65px !important;
+    z-index: 999;
 }
-
-
-.languague .collapse .navbar-collapse{
-    color:black;
-}
+/*下面左右按鈕*/
