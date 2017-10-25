@@ -469,6 +469,24 @@
         </div>
     </footer>
     <!--footer start from here-->
+    <a href="#" id="goTop" class="goTop"></a>
+
+    <script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("goTop").style.display = "block";
+    } else {
+        document.getElementById("goTop").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+
+</script>
+
     <div class="copyright footerbg">
         <div class="container">
             <div class="col-md-12">
@@ -479,11 +497,16 @@
     <!--HEADER END-->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/wow.min.js"></script>
+    <script src="js/wow.js"></script>
     <script src="js/tutorial.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/scrollanimated.js"></script>
+
     <script>
     new WOW().init();
     </script>
+
+
 
 </body>
 
