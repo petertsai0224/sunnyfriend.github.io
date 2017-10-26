@@ -8,25 +8,27 @@ font-family: 'Noto Sans TC';
 /*body不被蓋住*/
 .body{
 
-    padding-top: 80px;
+    padding-top: 85px;
 
 }
-
-
 
 
 i{
     visibility:hidden;
 }
 
+.lan>i{
+    visibility:visible;
+}
 
 .main-navigation {
 
 }
 
 .navbar-default {
-    padding: 8px 10px;
+    padding: 10px 10px;
     background: rgba(255, 255, 255, 0.95);
+    border-color:rgba(231, 231, 231, 0);
 }
 
 .navbar {
@@ -79,13 +81,21 @@ i{
 
 .navbar-default .navbar-nav>li>a {
     color: #354242;
-    margin: 10px 10px;
-    padding: 15px 5px;
+    margin: 0px 10px;
+    padding: 10px 0px 10px 10px;
     padding-bottom: 5px;
     font-size: 15px;
 
 }
-
+@media (max-width: 1200px) and  (min-width: 1023px){
+.navbar-default .navbar-nav>li>a {
+    color: #354242;
+    margin: 0px 0px;
+    padding: 10px 0px 10px 10px;
+    padding-bottom: 5px;
+    font-size: 15px;
+}
+}
 
 .dropdown-menu {
     width: 180px;
@@ -107,7 +117,7 @@ i{
 
 .Gradientline {
     text-align: center;
-    padding-bottom: 7px;
+    padding-bottom: 6px;
     background: linear-gradient( to left, #009943 0%,
     #AACD03 100%) left bottom #777 no-repeat;
     background-size: 100%;
@@ -219,18 +229,6 @@ img {
 .navbar {
     border-radius: 0px;
 }
-}
-
-@media (max-width: 1200px) and  (min-width: 1023px){
-
-.navbar-default .navbar-nav>li>a {
-    color: #354242;
-    margin: 10px 0px;
-    padding: 15px 5px;
-    padding-bottom: 5px;
-    font-size: 15px;
-}
-
 }
 
 
@@ -1726,15 +1724,100 @@ z-index: 999
 
 
 .goTop {
-    display:block;
+    display: block;
     background: url(../assets/images/owl_icon/gotop_btn.svg) center no-repeat;
     position: fixed;
     bottom: 50px;
     right: 50px;
     z-index: 9999;
-    background-color: rgb(148, 223, 181);
-    border-radius:99em;
-    width:60px;
-    height:60px;
-    display:none;
+    background-color: rgb(165, 204, 5);
+    border-radius: 99em;
+    width: 60px;
+    height: 60px;
+    display: none;
+    -webkit-box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
+    -moz-transition: ease-in 0.5s, ease-out 0.5s;
+    -webkit-transition: ease-in 0.5s, ease-out 0.5s;
+    -o-transition: ease-in 0.5s, ease-out 0.5s;
+    transition: ease-in 0.5s, ease-out 0.5s;
 }
+
+.goTop:hover {
+    background-color: rgb(192, 223, 62);
+}
+
+@media (max-width: 768px){
+.goTop {
+    bottom: 20px;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+}
+}
+@media (max-width: 480px){
+    .goTop {
+    bottom: 20px;
+    right: 25px;
+    width: 40px;
+    height: 40px;
+}
+}
+@media (max-width: 320px){
+    .goTop {
+    bottom: 25px;
+    right: 25px;
+    width: 40px;
+    height: 40px;
+}
+}
+
+
+/*語系*/
+
+.lan
+{
+    position: relative;
+    left: 68.5%;
+    font-size: 12px;
+    color: #7a7a7a;
+    letter-spacing: 0.5pt;
+    word-spacing: 3px;
+}
+
+.lan:hover
+{
+    color: #009943;
+    -moz-transition: ease-in 0.25s, ease-out 0.25s;
+    -webkit-transition: ease-in 0.25s, ease-out 0.25s;
+    -o-transition: ease-in 0.25s, ease-out 0.25s;
+    transition: ease-in 0.25s, ease-out 0.25s;
+}
+
+
+
+@media (max-width: 1200px) and (min-width: 1024px) {
+.lan
+{
+    position: relative;
+    left: 62.5%;
+}
+}
+
+@media (max-width:1024px){
+.lan
+{
+    position: relative;
+    left: 0%;
+    font-size: 14px;
+    color: #009943;
+    letter-spacing: 0.5pt;
+    word-spacing: 3px;
+    padding: 20px 20px;
+    display: block;
+        box-shadow: 0 1px #e4e4e4, 0 2px #ffffff;
+}
+}
+
+
