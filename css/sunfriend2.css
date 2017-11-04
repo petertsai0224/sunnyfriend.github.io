@@ -1122,6 +1122,7 @@ footer { background-color:#ffffff; min-height:350px; border-top: 1px solid #e5e5
   background-repeat: no-repeat;
   max-height: 511px;
 }
+
 .item>a{
     display: block;
     height: 100%;
@@ -1803,9 +1804,10 @@ z-index: 999
     position: relative;
     left: 62.5%;
 }
+
 }
 
-@media (max-width:1024px){
+@media (max-width:1023px){
 .lan
 {
     position: relative;
@@ -1819,5 +1821,3 @@ z-index: 999
         box-shadow: 0 1px #e4e4e4, 0 2px #ffffff;
 }
 }
-
-
